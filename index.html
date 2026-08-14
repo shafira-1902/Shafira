@@ -1,545 +1,1130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shafira Nur Maidah | Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    <title>Shafira Nur Maidah</title>
 
-:root{
-  --dark:#23483b;
-  --green:#527c69;
-  --soft:#dce8df;
-  --cream:#f7f2e8;
-  --light:#fcfaf5;
-  --text:#24332d;
-  --muted:#6c7771;
-  --white:#fff;
-  --border:rgba(35,72,59,.13);
-  --shadow:0 18px 45px rgba(35,72,59,.10);
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--light);line-height:1.7}
-a{text-decoration:none;color:inherit}
-img{width:100%;height:100%;object-fit:cover}
-.container{width:92%;max-width:1120px;margin:auto}
+    <style>
+        :root {
+            --hijau: #5f7d6e;
+            --hijau-tua: #263d33;
+            --hijau-muda: #dce7df;
+            --krem: #f4eee2;
+            --putih: #fffdf8;
+            --abu: #718078;
+            --garis: #d9ded8;
+        }
 
-/* NAVBAR */
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(252,250,245,.9);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
-}
-.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--dark)}
-.logo span{color:var(--green)}
-.nav-links{display:flex;gap:25px;list-style:none}
-.nav-links a{font-size:.88rem;font-weight:600;color:var(--muted);transition:.25s}
-.nav-links a:hover{color:var(--dark)}
-.menu-toggle{display:none;border:0;background:none;font-size:25px;color:var(--dark);cursor:pointer}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* HERO */
-.hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 85% 20%,rgba(164,193,174,.5),transparent 30%),
-    linear-gradient(135deg,#f7f2e8 0%,#e5eee7 55%,#cbded2 100%);
-}
-.hero::before{
-  content:"";
-  width:400px;height:400px;border-radius:50%;
-  position:absolute;right:-150px;bottom:-180px;
-  background:rgba(255,255,255,.35);
-}
-.hero-content{padding:100px 0;position:relative;z-index:2}
-.eyebrow{
-  color:var(--green);font-size:.74rem;letter-spacing:3px;
-  font-weight:700;margin-bottom:12px
-}
-.hero h1{
-  font-family:'Playfair Display',serif;
-  color:var(--dark);
-  font-size:clamp(3rem,7vw,6.5rem);
-  line-height:1.03;
-}
-.hero h1 span{color:var(--green)}
-.hero-text{max-width:650px;color:#53625b;margin:22px 0 28px;font-size:1.04rem}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 23px;border-radius:50px;font-weight:700;font-size:.9rem;transition:.25s}
-.btn-primary{background:var(--dark);color:white}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.btn-outline{border:1px solid var(--green);color:var(--dark);background:rgba(255,255,255,.3)}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* GENERAL */
-section{padding:100px 0}
-.soft{background:var(--cream)}
-.section-heading{max-width:680px;margin-bottom:45px}
-.section-heading h2{
-  font-family:'Playfair Display',serif;color:var(--dark);
-  font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.12;margin-bottom:10px
-}
-.section-heading>p:last-child{color:var(--muted)}
+        body {
+            background: var(--putih);
+            color: var(--hijau-tua);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+        }
 
-/* ABOUT */
-.about{
-  display:grid;grid-template-columns:320px 1fr;gap:45px;
-  align-items:center
-}
-.profile{
-  height:400px;border-radius:30px;overflow:hidden;
-  background:linear-gradient(145deg,#dce8df,#f5efe2);
-  box-shadow:var(--shadow)
-}
-.profile img{object-fit:cover}
-.about-text h3{
-  font-family:'Playfair Display',serif;color:var(--dark);
-  font-size:2rem;margin-bottom:12px
-}
-.about-text p{color:var(--muted);margin-bottom:18px}
-.about-tags{display:flex;flex-wrap:wrap;gap:9px}
-.tag{
-  padding:7px 12px;border-radius:50px;
-  background:var(--soft);color:var(--dark);font-size:.8rem;font-weight:600
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* CLASS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:18px}
-.stat{
-  background:white;padding:25px;border-radius:24px;
-  border:1px solid var(--border)
-}
-.stat strong{display:block;font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--dark)}
-.stat span{color:var(--muted);font-size:.85rem}
-.leadership{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.info-card{
-  padding:24px;border-radius:24px;
-  background:linear-gradient(145deg,#eef4ef,#fffdf8);
-  border:1px solid var(--border)
-}
-.info-card:first-child{grid-column:span 2}
-.label{
-  color:var(--green);font-size:.7rem;letter-spacing:2px;
-  text-transform:uppercase;font-weight:700
-}
-.info-card h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:1.3rem;margin:5px 0}
-.info-card p{color:var(--muted);font-size:.88rem}
+        img {
+            width: 100%;
+            display: block;
+        }
 
-/* SCHOOL */
-.school{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.school h2{font-family:'Playfair Display',serif;color:var(--dark);font-size:3.5rem;line-height:1.1}
-.badge{
-  display:inline-block;background:var(--dark);color:white;
-  padding:6px 14px;border-radius:30px;font-size:.72rem;font-weight:700;margin:15px 0
-}
-.school-intro>p:not(.eyebrow){color:var(--muted)}
-.quote{
-  margin-top:20px;padding:20px;border-left:3px solid var(--green);
-  background:rgba(255,255,255,.6);color:var(--dark);
-  font-family:'Playfair Display',serif
-}
-.details{background:white;padding:20px 25px;border-radius:25px;box-shadow:var(--shadow)}
-.detail{
-  display:flex;justify-content:space-between;gap:20px;
-  padding:15px 0;border-bottom:1px solid var(--border)
-}
-.detail:last-child{border-bottom:0}
-.detail span{color:var(--muted);font-size:.84rem}
-.detail strong{color:var(--dark);text-align:right;max-width:67%;font-size:.86rem}
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
 
-/* GALLERY */
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:15px}
-.gallery-item{position:relative;overflow:hidden;border-radius:22px;background:var(--soft)}
-.gallery-item img{transition:.5s}
-.gallery-item:hover img{transform:scale(1.06)}
-.gallery-large{grid-column:span 2;grid-row:span 2}
-.gallery-item::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(transparent,rgba(0,0,0,.65))
-}
-.gallery-item h3{
-  position:absolute;z-index:2;bottom:15px;left:18px;
-  color:white;font-size:1rem
-}
+        /* ================= NAVBAR ================= */
 
-/* LINKS */
-.links{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.link{
-  display:flex;align-items:center;gap:14px;
-  padding:20px;background:white;border:1px solid var(--border);
-  border-radius:20px;transition:.25s
-}
-.link:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.icon{font-size:25px}
-.link-content{flex:1}
-.link-content b{display:block;color:var(--dark)}
-.link-content small{color:var(--muted);font-size:.75rem}
+        nav {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(1050px, 92%);
+            z-index: 100;
 
-/* FOOTER */
-footer{background:var(--dark);color:white;padding:38px 0}
-.footer-content{display:flex;justify-content:space-between;gap:20px;align-items:center}
-footer h3{font-family:'Playfair Display',serif}
-footer p{color:#c4d2ca;font-size:.8rem}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-/* MOBILE */
-@media(max-width:850px){
-  .menu-toggle{display:block}
-  .nav-links{
-    display:none;position:absolute;top:76px;left:0;right:0;
-    padding:20px 5%;flex-direction:column;
-    background:rgba(252,250,245,.98);border-bottom:1px solid var(--border)
-  }
-  .nav-links.show{display:flex}
-  .about,.school{grid-template-columns:1fr}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns:1fr 1fr}
-  .gallery-large{grid-column:span 2;grid-row:span 1}
-  .links{grid-template-columns:1fr}
-}
+            padding: 13px 20px;
 
-@media(max-width:560px){
-  section{padding:70px 0}
-  .hero-content{padding:80px 0}
-  .stats,.leadership,.gallery{grid-template-columns:1fr}
-  .info-card:first-child,.gallery-large{grid-column:span 1}
-  .gallery{grid-auto-rows:250px}
-  .profile{height:320px}
-  .school h2{font-size:2.6rem}
-  .detail{flex-direction:column}
-  .detail strong{max-width:100%;text-align:left}
-  .footer-content{flex-direction:column;align-items:flex-start}
-}
-</style>
+            background: rgba(255, 253, 248, 0.86);
+            backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(38, 61, 51, 0.1);
+            border-radius: 50px;
+
+            box-shadow: 0 15px 35px rgba(38, 61, 51, 0.08);
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .logo span {
+            color: var(--hijau);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--abu);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--hijau-tua);
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 24px;
+            color: var(--hijau-tua);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 80% 20%, #d7e4da 0%, transparent 28%),
+                linear-gradient(135deg, #f7f1e6, #eef3ed);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border: 1px solid rgba(95, 125, 110, 0.25);
+            border-radius: 50%;
+
+            right: -250px;
+            bottom: -250px;
+        }
+
+        .hero-content {
+            padding-top: 80px;
+        }
+
+        .small-title {
+            color: var(--hijau);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 500;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin: 25px 0;
+        }
+
+        .hero h1 em {
+            color: var(--hijau);
+            font-weight: 500;
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+
+            max-width: 850px;
+        }
+
+        .hero-description {
+            max-width: 520px;
+            color: var(--abu);
+            font-size: 0.9rem;
+        }
+
+        .scroll-btn {
+            display: inline-block;
+            margin-top: 20px;
+
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            border-bottom: 1px solid var(--hijau-tua);
+            padding-bottom: 5px;
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 120px 0;
+        }
+
+        .label {
+            color: var(--hijau);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 500;
+            line-height: 1;
+            margin: 12px 0 18px;
+        }
+
+        .section-title em {
+            color: var(--hijau);
+        }
+
+        .section-description {
+            max-width: 650px;
+            color: var(--abu);
+            font-size: 0.9rem;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 75px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .profile-photo {
+            height: 470px;
+            overflow: hidden;
+
+            border-radius: 180px 180px 25px 25px;
+
+            background: var(--hijau-muda);
+        }
+
+        .profile-photo img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .about-text span {
+            color: var(--hijau);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 28px;
+        }
+
+        .tag {
+            padding: 8px 14px;
+
+            border: 1px solid var(--garis);
+            border-radius: 50px;
+
+            background: #fffefa;
+
+            color: var(--abu);
+            font-size: 0.7rem;
+        }
+
+        /* ================= CLASS ================= */
+
+        .class-section {
+            background: #faf8f1;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            margin-top: 55px;
+
+            border-top: 1px solid var(--garis);
+            border-bottom: 1px solid var(--garis);
+        }
+
+        .stat {
+            padding: 30px 20px;
+            border-right: 1px solid var(--garis);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat strong {
+            font-family: "Playfair Display", serif;
+            font-size: 2.7rem;
+            font-weight: 500;
+        }
+
+        .stat p {
+            color: var(--abu);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .people {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 1px;
+
+            margin-top: 35px;
+            background: var(--garis);
+        }
+
+        .person {
+            padding: 28px;
+            background: #faf8f1;
+            min-height: 145px;
+        }
+
+        .person:first-child {
+            grid-row: span 2;
+            background: var(--krem);
+        }
+
+        .role {
+            color: var(--hijau);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .person h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+
+        .person p {
+            color: var(--abu);
+            font-size: 0.72rem;
+        }
+
+        /* ================= SCHOOL ================= */
+
+        .school {
+            background: var(--krem);
+        }
+
+        .school-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+
+            margin-top: 55px;
+        }
+
+        .school-name {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .accreditation {
+            display: inline-block;
+
+            margin: 20px 0;
+
+            padding: 7px 14px;
+
+            background: var(--hijau-tua);
+            color: white;
+
+            border-radius: 50px;
+
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+        }
+
+        .vision {
+            font-family: "Playfair Display", serif;
+            color: var(--hijau);
+            font-size: 1.2rem;
+            margin-top: 25px;
+        }
+
+        .school-info {
+            border-top: 1px solid var(--garis);
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 20px;
+
+            padding: 16px 0;
+
+            border-bottom: 1px solid var(--garis);
+
+            font-size: 0.75rem;
+        }
+
+        .info label {
+            color: var(--abu);
+        }
+
+        /* ================= GALLERY ================= */
+
+        .gallery-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+
+            margin-bottom: 45px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 170px;
+            gap: 12px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            background: var(--hijau-muda);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 6;
+            grid-row: span 2;
+            border-radius: 45px 5px 5px 5px;
+        }
+
+        .gallery-item:nth-child(2),
+        .gallery-item:nth-child(3),
+        .gallery-item:nth-child(4),
+        .gallery-item:nth-child(5) {
+            grid-column: span 3;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-column: span 3;
+            grid-row: span 2;
+            border-radius: 5px 5px 45px 5px;
+        }
+
+        .gallery-item:nth-child(7) {
+            grid-column: span 3;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 60px 0 35px;
+
+            background: var(--hijau-tua);
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+        }
+
+        .footer-title {
+            font-family: "Playfair Display", serif;
+            font-size: 2.4rem;
+        }
+
+        .footer-text {
+            color: #bdcbc3;
+            font-size: 0.7rem;
+        }
+
+        .footer-mark {
+            color: #bdcbc3;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+
+                flex-direction: column;
+                gap: 0;
+
+                padding: 10px;
+
+                background: var(--putih);
+                border-radius: 20px;
+                border: 1px solid var(--garis);
+            }
+
+            .nav-links.active a {
+                display: block;
+                padding: 12px;
+            }
+
+            .about-grid,
+            .school-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .people {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .person:first-child {
+                grid-column: span 2;
+                grid-row: auto;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 230px;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: span 1;
+                grid-row: span 1;
+                border-radius: 5px;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .hero h1 {
+                font-size: 4rem;
+                letter-spacing: -2px;
+            }
+
+            .hero-bottom {
+                display: block;
+            }
+
+            section {
+                padding: 85px 0;
+            }
+
+            .profile-photo {
+                height: 390px;
+            }
+
+            .people {
+                grid-template-columns: 1fr;
+            }
+
+            .person:first-child {
+                grid-column: span 1;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 280px;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: span 1;
+            }
+
+            .footer-content {
+                display: block;
+            }
+
+            .footer-mark {
+                margin-top: 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<nav class="navbar container">
-  <a href="#beranda" class="logo">Shafira<span>.</span></a>
+<!-- ================= NAVIGASI ================= -->
 
-  <button class="menu-toggle" aria-label="Menu">☰</button>
+<nav>
+    <a href="#beranda" class="logo">
+        Shafira<span>.</span>
+    </a>
 
-  <ul class="nav-links">
-    <li><a href="#beranda">Beranda</a></li>
-    <li><a href="#tentang">Tentang Saya</a></li>
-    <li><a href="#kelas">Profil Kelas</a></li>
-    <li><a href="#sekolah">Profil Sekolah</a></li>
-    <li><a href="#galeri">Galeri</a></li>
-    <li><a href="#tautan">Tautan</a></li>
-  </ul>
+    <button class="menu-btn">☰</button>
+
+    <ul class="nav-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#kelas">Profil Kelas</a></li>
+        <li><a href="#sekolah">Profil Sekolah</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+    </ul>
 </nav>
-</header>
 
-<!-- BERANDA -->
-<section id="beranda" class="hero">
-<div class="container hero-content">
-  <p class="eyebrow">PERSONAL WEBSITE</p>
 
-  <h1>
-    Halo, saya<br>
-    <span>Shafira Nur Maidah</span>
-  </h1>
+<!-- ================= BERANDA ================= -->
 
-  <p class="hero-text">
-    Selamat datang di website pribadi saya. Di sini kamu bisa
-    mengenal saya lebih dekat, mulai dari biodata, hobi,
-    pendidikan, kegiatan, hingga pengalaman saya sebagai
-    bagian dari XII.2 Teknik SMA Negeri 10 Depok.
-  </p>
+<section class="hero" id="beranda">
 
-  <div class="buttons">
-    <a href="#tentang" class="btn btn-primary">Kenali Saya</a>
-    <a href="#kelas" class="btn btn-outline">Profil Kelas</a>
-  </div>
-</div>
+    <div class="container hero-content">
+
+        <div class="small-title">
+            Personal Website · XII.2 Teknik
+        </div>
+
+        <h1>
+            Shafira<br>
+            <em>Nur Maidah.</em>
+        </h1>
+
+        <div class="hero-bottom">
+
+            <p class="hero-description">
+                Ruang kecil untuk mengenal saya lebih dekat,
+                melihat perjalanan pendidikan, mengenal kelas,
+                sekolah, dan menyimpan beberapa momen berharga.
+            </p>
+
+            <div>
+                <a href="#tentang" class="scroll-btn">
+                    Kenali saya ↓
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- TENTANG SAYA -->
+
+<!-- ================= TENTANG SAYA ================= -->
+
 <section id="tentang">
-<div class="container">
 
-<div class="section-heading">
-  <p class="eyebrow">01 — TENTANG SAYA</p>
-  <h2>Mengenal Saya</h2>
-  <p>Beberapa hal sederhana tentang diri saya.</p>
-</div>
+    <div class="container">
 
-<div class="about">
+        <div class="label">
+            01 — Tentang Saya
+        </div>
 
-<div class="profile">
-  <img src="images/foto-shafira.jpg"
-       alt="Foto Shafira Nur Maidah"
-       >
-</div>
+        <h2 class="section-title">
+            A little bit<br>
+            <em>about me.</em>
+        </h2>
 
-<div class="about-text">
-  <h3>Shafira Nur Maidah</h3>
+        <p class="section-description">
+            Beberapa hal sederhana tentang diri saya,
+            minat, hobi, pendidikan, dan cita-cita.
+        </p>
 
-  <p>
-    Saya adalah siswi kelas XII.2 jurusan Teknik di
-    SMA Negeri 10 Depok. Saya memiliki ketertarikan
-    pada kegiatan kreatif, memasak, mendengarkan musik,
-    serta aktif mengikuti kegiatan Pramuka.
-  </p>
 
-  <p>
-    Saya ingin terus mengembangkan diri, mencoba hal-hal
-    baru, dan mewujudkan cita-cita saya untuk menjadi aktor.
-  </p>
+        <div class="about-grid">
 
-  <div class="about-tags">
-    <span class="tag">🍳 Memasak</span>
-    <span class="tag">🎧 Musik</span>
-    <span class="tag">🏕️ Pramuka</span>
-    <span class="tag">🎬 Aktor</span>
-  </div>
-</div>
+            <div class="profile-photo">
+                <img src="foto-biodata.jpg" alt="Foto Shafira Nur Maidah">
+            </div>
 
-</div>
-</div>
+            <div>
+
+                <p class="about-text">
+                    Halo, saya <span>Shafira Nur Maidah</span>.
+                    Saya adalah siswi kelas XII.2 jurusan Teknik
+                    di SMA Negeri 10 Depok.
+                    Saya senang memasak, mendengarkan musik,
+                    mengikuti kegiatan Pramuka, dan memiliki
+                    cita-cita menjadi seorang aktor.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        19 Februari 2009
+                    </span>
+
+                    <span class="tag">
+                        XII.2 Teknik
+                    </span>
+
+                    <span class="tag">
+                        🍳 Memasak
+                    </span>
+
+                    <span class="tag">
+                        🎧 Mendengarkan Musik
+                    </span>
+
+                    <span class="tag">
+                        🏕️ Pramuka
+                    </span>
+
+                    <span class="tag">
+                        🎬 Cita-cita: Aktor
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- PROFIL KELAS -->
-<section id="kelas" class="soft">
-<div class="container">
 
-<div class="section-heading">
-  <p class="eyebrow">02 — PROFIL KELAS</p>
-  <h2>XII.2 Teknik</h2>
-  <p>Kelas tempat saya belajar dan bertumbuh bersama teman-teman.</p>
-</div>
+<!-- ================= PROFIL KELAS ================= -->
 
-<div class="stats">
-  <div class="stat"><strong>36</strong><span>Total Siswa</span></div>
-  <div class="stat"><strong>19</strong><span>Laki-laki</span></div>
-  <div class="stat"><strong>17</strong><span>Perempuan</span></div>
-  <div class="stat"><strong>XII.2</strong><span>Jurusan Teknik</span></div>
-</div>
+<section class="class-section" id="kelas">
 
-<div class="leadership">
+    <div class="container">
 
-<div class="info-card">
-  <span class="label">Wali Kelas</span>
-  <h3>M. Solahuddin, S.Pd., M.H., M.M.</h3>
-  <p>Wali kelas XII.2 Teknik.</p>
-</div>
+        <div class="label">
+            02 — Profil Kelas
+        </div>
 
-<div class="info-card">
-  <span class="label">Ketua Kelas</span>
-  <h3>Avrilia Karunia Kasih</h3>
-  <p>Ketua kelas XII.2 Teknik.</p>
-</div>
+        <h2 class="section-title">
+            XII.2 <em>Teknik.</em>
+        </h2>
 
-<div class="info-card">
-  <span class="label">Wakil Ketua</span>
-  <h3>Abidama Hestu Brianto</h3>
-  <p>Wakil ketua kelas.</p>
-</div>
+        <p class="section-description">
+            Tempat saya belajar, bekerja sama, dan membuat
+            banyak kenangan bersama teman-teman.
+        </p>
 
-<div class="info-card">
-  <span class="label">Sekretaris 1</span>
-  <h3>Faiza Hasna Danis Ara</h3>
-  <p>Sekretaris kelas.</p>
-</div>
 
-<div class="info-card">
-  <span class="label">Sekretaris 2</span>
-  <h3>Shafira Nur Maidah</h3>
-  <p>Sekretaris kelas.</p>
-</div>
+        <div class="stats">
 
-</div>
-</div>
+            <div class="stat">
+                <strong>36</strong>
+                <p>Total Siswa</p>
+            </div>
+
+            <div class="stat">
+                <strong>19</strong>
+                <p>Laki-laki</p>
+            </div>
+
+            <div class="stat">
+                <strong>17</strong>
+                <p>Perempuan</p>
+            </div>
+
+            <div class="stat">
+                <strong>12.2</strong>
+                <p>Teknik</p>
+            </div>
+
+        </div>
+
+
+        <div class="people">
+
+            <div class="person">
+
+                <div class="role">
+                    Wali Kelas
+                </div>
+
+                <h3>
+                    M. Solahuddin, S.Pd., M.H., M.M.
+                </h3>
+
+                <p>
+                    Wali kelas XII.2 Teknik yang membimbing
+                    dan mendampingi kelas.
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="role">
+                    Ketua Kelas
+                </div>
+
+                <h3>
+                    Avrilia Karunia Kasih
+                </h3>
+
+                <p>
+                    Ketua kelas XII.2 Teknik.
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="role">
+                    Wakil
+                </div>
+
+                <h3>
+                    Abidama Hestu Brianto
+                </h3>
+
+                <p>
+                    Wakil ketua kelas.
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="role">
+                    Sekretaris 1
+                </div>
+
+                <h3>
+                    Faiza Hasna Danis Ara
+                </h3>
+
+                <p>
+                    Sekretaris kelas.
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <div class="role">
+                    Sekretaris 2
+                </div>
+
+                <h3>
+                    Shafira Nur Maidah
+                </h3>
+
+                <p>
+                    Sekretaris kelas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- PROFIL SEKOLAH -->
-<section id="sekolah">
-<div class="container school">
 
-<div class="school-intro">
-  <p class="eyebrow">03 — PROFIL SEKOLAH</p>
-  <h2>SMA Negeri 10 Depok</h2>
-  <span class="badge">TERAKREDITASI A</span>
+<!-- ================= PROFIL SEKOLAH ================= -->
 
-  <p>
-    Sekolah tempat saya menempuh pendidikan dan
-    mengembangkan berbagai potensi diri.
-  </p>
+<section class="school" id="sekolah">
 
-  <div class="quote">
-    “Mewujudkan lulusan yang berakhlak mulia,
-    unggul dalam prestasi dan inovasi, berbudaya
-    lingkungan serta berwawasan global.”
-  </div>
-</div>
+    <div class="container">
 
-<div class="details">
+        <div class="label">
+            03 — Profil Sekolah
+        </div>
 
-<div class="detail">
-  <span>Alamat</span>
-  <strong>Jl. Raya Curug Topik, Kelurahan Curug, Kecamatan Bojongsari, Kota Depok, Jawa Barat, Indonesia</strong>
-</div>
 
-<div class="detail">
-  <span>Kepala Sekolah</span>
-  <strong>Asep Panji Lesmana, S.S.</strong>
-</div>
+        <div class="school-grid">
 
-<div class="detail">
-  <span>Jumlah Murid</span>
-  <strong>1.033 murid</strong>
-</div>
+            <div>
 
-<div class="detail">
-  <span>Rombel</span>
-  <strong>27 rombel</strong>
-</div>
+                <h2 class="school-name">
+                    SMA Negeri<br>
+                    10 Depok.
+                </h2>
 
-<div class="detail">
-  <span>Guru & Tendik</span>
-  <strong>64 orang</strong>
-</div>
+                <div class="accreditation">
+                    TERAKREDITASI A
+                </div>
 
-<div class="detail">
-  <span>Prestasi Puspresnas</span>
-  <strong>10+ prestasi</strong>
-</div>
+                <p class="section-description">
+                    Sekolah tempat saya menempuh pendidikan,
+                    berkembang, belajar, dan menemukan
+                    berbagai pengalaman baru.
+                </p>
 
-</div>
-</div>
+                <p class="vision">
+                    “Mewujudkan lulusan yang berakhlak mulia,
+                    unggul dalam prestasi dan inovasi,
+                    berbudaya lingkungan serta berwawasan global.”
+                </p>
+
+            </div>
+
+
+            <div class="school-info">
+
+                <div class="info">
+                    <label>Alamat</label>
+
+                    <strong>
+                        Jl. Raya Curug Topik,
+                        Kelurahan Curug,
+                        Kecamatan Bojongsari,
+                        Kota Depok,
+                        Jawa Barat, Indonesia.
+                    </strong>
+                </div>
+
+
+                <div class="info">
+                    <label>Kepala Sekolah</label>
+
+                    <strong>
+                        Asep Panji Lesmana, S.S.
+                    </strong>
+                </div>
+
+
+                <div class="info">
+                    <label>Murid</label>
+
+                    <strong>
+                        1.033 siswa
+                    </strong>
+                </div>
+
+
+                <div class="info">
+                    <label>Rombel</label>
+
+                    <strong>
+                        27 rombel
+                    </strong>
+                </div>
+
+
+                <div class="info">
+                    <label>Guru & Tendik</label>
+
+                    <strong>
+                        64 orang
+                    </strong>
+                </div>
+
+
+                <div class="info">
+                    <label>Prestasi</label>
+
+                    <strong>
+                        10+ prestasi Puspresnas
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- GALERI -->
-<section id="galeri" class="soft">
-<div class="container">
 
-<div class="section-heading">
-  <p class="eyebrow">04 — GALERI</p>
-  <h2>Momen & Kegiatan</h2>
-  <p>Dokumentasi kegiatan sekolah, kelas, Pramuka, dan berbagai momen bersama teman.</p>
-</div>
+<!-- ================= GALERI ================= -->
 
-<div class="gallery">
+<section id="galeri">
 
-<div class="gallery-item gallery-large">
-  <img src="images/kegiatan-1.jpg" alt="Kebersamaan bersama teman">
-  <h3>Kebersamaan Bersama Teman</h3>
-</div>
+    <div class="container">
 
-<div class="gallery-item">
-  <img src="images/kegiatan-2.jpg" alt="Kegiatan Pramuka">
-  <h3>Kegiatan Pramuka</h3>
-</div>
+        <div class="gallery-heading">
 
-<div class="gallery-item">
-  <img src="images/kegiatan-3.jpg" alt="Kegiatan di sekolah">
-  <h3>Kegiatan di Sekolah</h3>
-</div>
+            <div>
 
-<div class="gallery-item">
-  <img src="images/kegiatan-4.jpg" alt="Momen bersama">
-  <h3>Momen Bersama</h3>
-</div>
+                <div class="label">
+                    04 — Galeri
+                </div>
 
-<div class="gallery-item">
-  <img src="images/kegiatan-5.webp" alt="Kegiatan kelas">
-  <h3>Kegiatan Kelas</h3>
-</div>
+                <h2 class="section-title">
+                    Moments <em>to keep.</em>
+                </h2>
 
-<div class="gallery-item">
-  <img src="images/kegiatan-6.jpg" alt="Momen XII.2 Teknik">
-  <h3>Momen XII.2 Teknik</h3>
-</div>
+            </div>
 
-<div class="gallery-item">
-  <img src="images/kegiatan-7.jpg" alt="Kenangan di sekolah">
-  <h3>Kenangan di Sekolah</h3>
-</div>
+            <p class="section-description">
+                Beberapa momen kegiatan dan kebersamaan
+                yang ingin saya simpan sebagai kenangan.
+            </p>
 
-<div class="gallery-item">
-  <img src="images/kegiatan-8.jpg" alt="Kenangan bersama">
-  <h3>Kenangan Bersama</h3>
-</div>
+        </div>
 
-</div>
-</div>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="kegiatan1.jpg" alt="Kegiatan 1">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan2.jpg" alt="Kegiatan 2">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan3.jpg" alt="Kegiatan 3">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan4.jpg" alt="Kegiatan 4">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan5.jpg" alt="Kegiatan 5">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan6.jpg" alt="Kegiatan 6">
+            </div>
+
+            <div class="gallery-item">
+                <img src="kegiatan7.jpg" alt="Kegiatan 7">
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- TAUTAN -->
-<section id="tautan">
-<div class="container">
 
-<div class="section-heading">
-  <p class="eyebrow">05 — TAUTAN</p>
-  <h2>My Links</h2>
-  <p>Tambahkan media sosial atau tautan lain yang ingin ditampilkan.</p>
-</div>
-
-<div class="links">
-
-<a href="#" class="link">
-  <div class="icon">📷</div>
-  <div class="link-content">
-    <b>Instagram</b>
-    <small>Tambahkan username Instagram</small>
-  </div>
-  <span>↗</span>
-</a>
-
-<a href="#" class="link">
-  <div class="icon">💻</div>
-  <div class="link-content">
-    <b>GitHub</b>
-    <small>Tambahkan repository GitHub</small>
-  </div>
-  <span>↗</span>
-</a>
-
-<a href="#" class="link">
-  <div class="icon">📧</div>
-  <div class="link-content">
-    <b>Email</b>
-    <small>Tambahkan alamat email</small>
-  </div>
-  <span>↗</span>
-</a>
-
-</div>
-</div>
-</section>
+<!-- ================= FOOTER ================= -->
 
 <footer>
-<div class="container footer-content">
-  <div>
-    <h3>Shafira Nur Maidah</h3>
-    <p>Personal Website · XII.2 Teknik · SMA Negeri 10 Depok</p>
-  </div>
-  <p>© 2026 Shafira Nur Maidah</p>
-</div>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <div class="footer-title">
+                Shafira.
+            </div>
+
+            <div class="footer-text">
+                Personal Website · XII.2 Teknik · SMA Negeri 10 Depok
+            </div>
+
+        </div>
+
+        <div class="footer-mark">
+            made with memories
+        </div>
+
+    </div>
+
 </footer>
 
+
+<!-- ================= JAVASCRIPT MENU HP ================= -->
+
 <script>
-const button=document.querySelector(".menu-toggle");
-const menu=document.querySelector(".nav-links");
 
-button.addEventListener("click",()=>{
-  menu.classList.toggle("show");
-});
+    const menuButton = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    menu.classList.remove("show");
-  });
-});
+    menuButton.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
 </script>
 
 </body>
